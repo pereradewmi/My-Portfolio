@@ -5,9 +5,14 @@ span{
 }
 h1{
     font-size: 4rem;
+    margin: 20px !important;
+}
+
+h2{
+    margin-bottom: 4rem !important;
 }
 .shape{
-    background-image: url(public/images/shape-two.png);
+    /* background-image: url(public/images/shape-two.png); */
     height: 550px;
     width: 100%;
     background-repeat: no-repeat;
@@ -17,3 +22,243 @@ h1{
     position: relative;
 }
 
+.card-group{
+    margin-bottom: 4rem;
+}
+.card {
+    width: 18rem;
+    background-image: radial-gradient(#bcc2ff, #a9d4ff, #d9befe);
+    /* border: 1px solid #ddd; */
+    border-radius: 40px 2px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+}
+.card:hover{
+    box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.1);
+    background-image: radial-gradient(#000000, #000000, #1a003e);
+    color: white;
+}
+.card-img-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    /* background-color: #f8f9fa; */
+}
+
+.card-img-top i {
+    font-size: 48px;
+    background-color: #0f0f0f;
+    color: white;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+.card-img-top i:hover {
+    font-size: 48px;
+    background-color: #a8aef5;
+    color: rgb(0, 0, 0);
+    transform: scale(1.1);
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 3rem !important;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.projects{
+  min-height: 100svh;
+  padding: 2rem;
+  /* background-color: #121212; */
+  /* color: white; */
+  font-family: system-ui;
+
+  display: grid;
+  place-content: center;
+}
+.gallery button {
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: inherit;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+.gallery {
+  --_size: 150px; /* width and heigh of iamges */
+  --_grid-cols: repeat(2, 1fr);
+
+  --_gap: 5px;
+  --_translate-img: 0 calc(var(--_size) * 3 * -1); /* define where we want to translate the image from*/
+  --_translate-bio: 0 calc(var(--_size) * 3); /* define where we want to translate the text from */
+  --_hover-opacity: 0.2; /* opacity of images when one of them is "active"*/
+  --_img-offset: calc(var(--_size) / 4);
+  --_bio-top: 50%; /* positioning of the bio when active */
+
+  width: 100%;
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: var(--_grid-cols);
+
+  gap: var(--_gap);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  .gallery {
+    --_size: 300px;
+    --_grid-cols: repeat(4, 1fr);
+    --_translate-bio: calc(var(--_size) * 3) 0;
+    --_bio-top: 0;
+  }
+}
+
+.gallery > article {
+  height: var(--_size);
+  aspect-ratio: 1;
+  background-image: var(--bg-img);
+  background-position: center;
+  background-size: 0%;
+  background-repeat: no-repeat;
+}
+.gallery > article > button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 500ms ease-in-out;
+}
+
+.gallery > article > div {
+  position: absolute;
+  top: var(--_bio-top);
+  right: 0;
+  width: calc((var(--_size) + var(--_gap)) * 2);
+  height: calc((var(--_size) + var(--_gap)) * 2);
+  background-color: white;
+  color: #555;
+  padding: 2rem;
+  transition: 500ms ease-in-out;
+  opacity: 0;
+  translate: var(--_translate-bio);
+  z-index: 1;
+}
+
+.gallery > article > div > h2 {
+  font-size: 1.2rem;
+}
+.gallery > article > div > p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  
+    max-height: 50%; /* this could be better */
+    overflow-y: auto;
+}
+.gallery > article > div > button {
+  border: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  cursor: pointer;
+  transition: rotate 300ms;
+}
+
+.gallery > article > div > button:focus-visible,
+.gallery > article > div > button:hover {
+  rotate: 90deg;
+}
+
+.gallery > article::before {
+  content: "";
+  position: absolute;
+  inset: var(--_img-offset);
+  width: calc((var(--_size) + var(--_gap)) * 1.5);
+  height: calc((var(--_size) + var(--_gap)) * 1.5);
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0;
+  translate: var(--_translate-img);
+  transition: 500ms ease-in-out;
+  background-image: inherit;
+}
+
+/* set opacity on images */
+.gallery:has(article > button:focus-within) > article img {
+  opacity: var(--_hover-opacity);
+}
+
+/* slide in photo */
+.gallery > article:has(>button:focus-within)::before {
+  translate: 0;
+  opacity: 1;
+}
+/* slide in bio */
+.gallery article:has(>button:focus-within) > div {
+  opacity: 1;
+  translate: 0;
+}
+
+/* close buttons */
+/* 
+these are not really needed, the important thing is taking the focus aways from the "open" button 
+I have given them tabindex -1 so that they don't get keyboard focus which means that tabbing on the keyboard will automatically open the next image and bio. 
+Removing the tabindex -1 will give a pause (and extra keyboard action) between each iamge opening, it depends on how you want this to work.
+*/
+/*
+.gallery:has(button[data-close]:focus-within) > article::before {
+  translate: var(--_translate-img);
+}
+.gallery:has(button[data-close]:focus-within) > article > div {
+  translate: var(--_translate-bio);
+}*/
