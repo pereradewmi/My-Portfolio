@@ -1,12 +1,19 @@
-
-
-.navbar.navbar-expand-lg.bg-body-tertiary{
-    background-color: blueviolet !important;
-    border-radius: 10%;
+*{
 }
-
-.main-banner{
-    background-color: black;
-    height: 600px;
+span{
+    font-size: 4rem;
+}
+h1{
+    font-size: 4rem;
+}
+.shape{
+    background-image: url(public/images/shape-two.png);
+    height: 550px;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    position: relative;
 }
+
