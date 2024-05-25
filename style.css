@@ -69,6 +69,7 @@ input.btn.btn-primary:hover{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin: 20px;
+    /* margin: 5px; */
     padding: 20px;
 }
 .card:hover{
@@ -333,5 +334,17 @@ i.bi.bi-envelope-at-fill{
   margin-top: 30px;
   background-color: #0f0f0f;
   color: white;
+  text-align: center;
 }
 
+/* responsive CSS */
+@media screen and (min-width: 360px) and (max-width: 980px) {
+  .img-home {
+    height: 300px !important;
+    margin-bottom: 5rem !important;
+   
+  }
+  .contact-mail{
+    font-size: 18px;
+  }
+}
