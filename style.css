@@ -287,23 +287,45 @@ img {
 
 .contact-phone{
   background-color: #bcc2ff;
-  padding: 50px;
+  padding: 30px;
   margin: 5px;
   border-radius: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .contact-social{
   background-color: #b797fc;
-  padding: 50px;
+  padding: 30px;
   margin: 5px;
   border-radius: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .contact-mail{
   background-color: #f0bcff;
-  padding: 50px;
+  padding: 30px;
   margin: 5px;
   border-radius: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+i.bi.bi-telephone-fill{
+  font-size: 30px;
+  margin-right: 20px;
+}
+i.bi.bi-linkedin{
+  font-size: 30px;
+  margin-right: 20px;
+}
+i.bi.bi-envelope-at-fill{
+  font-size: 30px;
+  margin-right: 20px;
 }
 
 .footer{
@@ -312,3 +334,4 @@ img {
   background-color: #0f0f0f;
   color: white;
 }
+
