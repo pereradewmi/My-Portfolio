@@ -27,7 +27,11 @@ h2{
   background-image: linear-gradient(to right,rgb(246, 159, 246), rgb(159, 195, 246) , rgb(159, 179, 220));
   display: flex;
   justify-content: flex-end;
+  border-radius: 30px 30px;
+  /* margin-top: 20px !important; */
+  margin: 20px 20px 0 20px !important;
 }
+
 input.btn.btn-primary{
   border-radius: 30px 30px;
   /* margin-right: 50px !important; */
