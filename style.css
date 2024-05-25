@@ -4,7 +4,7 @@
 span{
     font-size: 5rem !important;
     font-weight: 900;
-    margin-top: 60px !important;
+    /* margin-top: 60px !important; */
     /* text-align: center; */
 }
 h1{
@@ -22,10 +22,25 @@ h2{
 
 }
 
-.btn-cv{
-  background-color: #a8aef5;
+.navbar.navbar-dark{
+  /* background-color: #a8aef5; */
+  background-image: linear-gradient(to right,rgb(246, 159, 246), rgb(159, 195, 246) , rgb(159, 179, 220));
   display: flex;
   justify-content: flex-end;
+}
+input.btn.btn-primary{
+  border-radius: 30px 30px;
+  /* margin-right: 50px !important; */
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  background-color: #e5e3e31b;
+  border: none;
+}
+input.btn.btn-primary:hover{
+  background-color: black;
+}
+.navbar-toggler-icon{
+  font-size: 20px !important;
 }
 .shape{
     /* background-image: url(public/images/shape-two.png); */
