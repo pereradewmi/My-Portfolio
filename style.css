@@ -1,8 +1,9 @@
 *{
   font-family: 'Fredoka One', cursive;
+  
 }
 body{
-  background-color:#f4e0ff !important;
+  /* background-color:#f4e0ff !important; */
 }
 span{
     font-size: 5rem !important;
